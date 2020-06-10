@@ -1,0 +1,258 @@
+@font-face {
+  src: url("https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap");
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background-color: #1d1d1d;
+  background-image: url("/assets/dummy_model.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+body nav {
+  height: 114px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: #2D2D2D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body nav .nav__left {
+  width: 33.5%;
+  height: 100%;
+  background-image: url("/assets/nav__left-background.png");
+  background-position: right bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body nav .nav__left .nav__left__list {
+  width: 33.5vw;
+  height: 100%;
+  margin: 0% 5% 0% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav .nav__left .nav__left__list .nav__left__list__item {
+  padding-bottom: 5%;
+}
+
+body nav .nav__left .nav__left__list .nav__left__list__item img {
+  width: 143px;
+  height: 24px;
+}
+
+body nav .nav__left .nav__left__list .nav__left__list__item a {
+  text-decoration: none;
+  color: #241F20;
+  font-size: 1em;
+  padding: 5%;
+}
+
+body nav .nav__left .nav__left__list .nav__left__list__item #nav__left__list__item--current {
+  color: #006090;
+  border-bottom: 3px solid #006090;
+}
+
+body nav .nav__right {
+  width: 66.5%;
+  height: 100%;
+  background: rgba(0, 96, 144, 0.8);
+  padding: 0% 5% 0% 5%;
+}
+
+body nav .nav__right .nav__right__container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body nav .nav__right .nav__right__container .nav__right__link {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .nav__right .nav__right__container .nav__right__link a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+body nav .nav__right .nav__right__container #nav__right__link--current {
+  border-bottom: 3px solid white;
+}
+
+body .welcome-form__page {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 96, 144, 0.8);
+}
+
+body .welcome-form__page .welcome-form__page__header {
+  height: 118px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: #006090;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
+  width: 20%;
+  height: 100%;
+  background: white;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
+  width: 143px;
+  height: 24px;
+}
+
+body .welcome-form__page .welcome-form__page__container__form {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  margin: 0% 15% 0% 15%;
+  bottom: 0;
+  background: transparent;
+  display: block;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .form-row {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: transparent;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .form-row .form-column {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: transparent;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .form-row label {
+  display: block;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .form-row input {
+  background: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 2px solid #1ba099;
+  -webkit-transition: all .75s;
+  transition: all .75s;
+  outline: none;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .radio-button_container .radio-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .hide {
+  visibility: hidden;
+}
+/*# sourceMappingURL=styles.css.map */
