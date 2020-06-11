@@ -25,7 +25,7 @@
     height: 100vh;
     width: 100vw;
     background-color: rgb(29, 29, 29);
-    background-image: url("/assets/dummy_model.png");
+    background-image: url("/public/assets/dummy_model.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,7 +46,7 @@
       .nav__left {
         width: 33.5%;
         height: 100%;
-        background-image: url("/assets/nav__left-background.png");
+        background-image: url("/public/assets/nav__left-background.png");
         background-position: right bottom ;
         display: flex;
         flex-direction: row;
@@ -75,7 +75,7 @@
                 padding: 5%;
                 }
 
-                #nav__left__list__item--current{
+            .nav__left__list__item--current{
               color: $nav__left__item--current;
               border-bottom: 3px solid $nav__left__item--current;
             }
@@ -214,13 +214,14 @@
               display: block;
             }
           
-            input {
+            select, input {
               background: white;
               border: none;
               box-shadow: none;
               height: 4vh;
               outline: none;
             }
+
           }
           
           .radio-button__container{
@@ -266,8 +267,8 @@
 
             button.welcome-form__submit {
               grid-row: 2;
-              height: 6vh;
-              width: 17vw;
+              height: 50px;
+              width: 240px;
               background: #DEE9EE;
               background-size: cover;
               background-position: right;
@@ -294,7 +295,7 @@
                 width: 100%;
                 margin: 0;
                 padding:0;
-                background:  url("/assets/submit_arrow.png");
+                background:  url("/public/assets/submit_arrow.png");
                 clip-path: inset(0 0 0 78%);
                 background-size: cover;
                 background-position: right;
@@ -322,6 +323,26 @@
     .hide {
       // visibility: hidden;
       display: none;
+    }
+
+
+
+
+
+    // canvas {
+    //   height: 100%;
+    //   width: 100%;
+    //   background: red;
+    //   margin-top: 15vh;
+    // }
+
+    .link-content-container {
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+
+      
+
     }
 
 

@@ -15,7 +15,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #1d1d1d;
-  background-image: url("/assets/dummy_model.png");
+  background-image: url("/public/assets/dummy_model.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,7 +41,7 @@ body nav {
 body nav .nav__left {
   width: 33.5%;
   height: 100%;
-  background-image: url("/assets/nav__left-background.png");
+  background-image: url("/public/assets/nav__left-background.png");
   background-position: right bottom;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,13 +135,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   border-bottom: 3px solid white;
 }
 
-@media screen and (min-width: 25em) {
-  body html {
-    font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
-  }
-}
-
-.welcome-form__page {
+body .welcome-form__page {
   display: block;
   height: 100%;
   width: 100%;
@@ -150,7 +144,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   background: rgba(0, 96, 144, 0.8);
 }
 
-.welcome-form__page .welcome-form__page__header {
+body .welcome-form__page .welcome-form__page__header {
   height: 117px;
   width: 100%;
   position: fixed;
@@ -167,7 +161,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
           flex-direction: row;
 }
 
-.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
+body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
   width: 20%;
   height: 100%;
   background: white;
@@ -184,12 +178,12 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
           align-items: center;
 }
 
-.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
+body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
   width: 143px;
   height: 24px;
 }
 
-.welcome-form__page .welcome-form__page__container__form {
+body .welcome-form__page .welcome-form__page__container__form {
   position: absolute;
   width: 66%;
   height: 70%;
@@ -200,7 +194,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   font-size: 14px;
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__text {
   width: 100%;
   height: 10vh;
   color: #FFFFFF;
@@ -219,17 +213,17 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   margin-bottom: 2vh;
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text {
   font-size: 32px;
   padding: 15px;
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text-info {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text-info {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.welcome-form__page .welcome-form__page__container__form .form-row {
+body .welcome-form__page .welcome-form__page__container__form .form-row {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +238,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   background: transparent;
 }
 
-.welcome-form__page .welcome-form__page__container__form .form-row .form-column {
+body .welcome-form__page .welcome-form__page__container__form .form-row .form-column {
   height: 100%;
   width: 100%;
   padding: 7px;
@@ -261,12 +255,12 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   background: transparent;
 }
 
-.welcome-form__page .welcome-form__page__container__form .form-row label {
+body .welcome-form__page .welcome-form__page__container__form .form-row label {
   margin-left: 5px;
   display: block;
 }
 
-.welcome-form__page .welcome-form__page__container__form .form-row input {
+body .welcome-form__page .welcome-form__page__container__form .form-row select, body .welcome-form__page .welcome-form__page__container__form .form-row input {
   background: white;
   border: none;
   -webkit-box-shadow: none;
@@ -275,7 +269,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   outline: none;
 }
 
-.welcome-form__page .welcome-form__page__container__form .radio-button__container {
+body .welcome-form__page .welcome-form__page__container__form .radio-button__container {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -283,7 +277,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
       grid-template-rows: auto auto;
 }
 
-.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-button__text {
+body .welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-button__text {
   -ms-grid-row: 1;
   grid-row: 1;
   font-size: 16px;
@@ -292,7 +286,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons {
+body .welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons {
   -ms-grid-row: 2;
   grid-row: 2;
   display: -webkit-box;
@@ -306,13 +300,13 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   font-weight: 400;
 }
 
-.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons input {
+body .welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons input {
   margin: 0px 20px 0px 20px;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto auto;
@@ -324,7 +318,7 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   padding: 0;
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__page__submit__text {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__page__submit__text {
   -ms-grid-row: 1;
   grid-row: 1;
   text-align: center;
@@ -332,22 +326,24 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit {
   -ms-grid-row: 2;
   grid-row: 2;
-  height: 6vh;
-  width: 17vw;
+  height: 50px;
+  width: 240px;
   background: #DEE9EE;
   background-size: cover;
   background-position: right;
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
   cursor: pointer;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit p {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit p {
   position: fixed;
   z-index: 2;
   margin: 1.2% 0% 0% 4%;
@@ -356,12 +352,12 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   color: rgba(0, 96, 144, 0.8);
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit .welcome-form__submit-inner {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit .welcome-form__submit-inner {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background: url("/assets/submit_arrow.png");
+  background: url("/public/assets/submit_arrow.png");
   -webkit-clip-path: inset(0 0 0 78%);
           clip-path: inset(0 0 0 78%);
   background-size: cover;
@@ -371,18 +367,24 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
 }
 
-.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit:hover .welcome-form__submit-inner {
+body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit:hover .welcome-form__submit-inner {
   -webkit-clip-path: inset(0 0 0 0%);
           clip-path: inset(0 0 0 0%);
 }
 
-.welcome-form__page .welcome-form__page__container__form .required-field {
+body .welcome-form__page .welcome-form__page__container__form .required-field {
   padding: 2px;
   font-size: 18px;
   color: #32cafd;
 }
 
-.hide {
+body .hide {
   display: none;
+}
+
+body .link-content-container {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
 /*# sourceMappingURL=main.css.map */
