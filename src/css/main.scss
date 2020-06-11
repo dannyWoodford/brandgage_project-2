@@ -1,9 +1,9 @@
 
-
 @font-face {
     src: url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
     font-family: 'Overpass', sans-serif;
   }
+
   
   $blue: rgba(0, 96, 144, 0.8);
   $solid-blue: rgb(0, 96, 144);
@@ -15,19 +15,25 @@
   $nav__left__item: #241F20;
   $nav__right__link: white;
   
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+  }
   body {
+    height: 100vh;
+    width: 100vw;
     background-color: rgb(29, 29, 29);
     background-image: url("/assets/dummy_model.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
+    // margin: 0;
 
 
     nav {
-      height: 114px;
+      height: 115px;
       width: 100%;
       position: fixed;
       top: 0;
@@ -66,7 +72,6 @@
             a {
                 text-decoration: none;
                 color: $nav__left__item;
-                font-size: 1em;
                 padding: 5%;
                 }
 
@@ -114,17 +119,16 @@
     }
 
 
-
-
     .welcome-form__page{
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: fixed;
       z-index: 2;
       background: $blue;
 
       .welcome-form__page__header {
-        height: 118px;
+        height: 117px;
         width: 100%;
         position: fixed;
         top: 0;
@@ -133,6 +137,7 @@
         background: $solid-blue;
         display: flex;
         flex-direction: row;
+        
 
         .welcome-form__page__header__logo {
           width: 20%;
@@ -151,18 +156,41 @@
         }
 
       }
-        // .welcome-form__page__text {
-
-        // }
+      
 
         .welcome-form__page__container__form {
           position: absolute;
-          width: 70vw;
-          height: 70vh;
-          margin: 0% 15% 0% 15%;
-          bottom: 0;
+          width: 66%;
+          height: 70%;
+          margin: 10% 17% 0% 17%;
           background: transparent;
           display: block;
+          color: $white;
+          font-size: 14px;
+          
+          .welcome-form__page__text {
+            width: 100%;
+            height: 10vh;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+            padding: 2vh;
+            margin-bottom: 2vh;
+            
+            #welcome-text {
+              font-size: 32px;
+              padding: 15px;
+            }
+
+            #welcome-text-info {
+              font-size: 16px;
+              color: rgba(255, 255, 255, 0.8);
+            }
+
+
+          }
 
           .form-row {
             height: 10vh;
@@ -174,7 +202,7 @@
             .form-column {
               height: 100%;
               width: 100%;
-              padding: 15px;
+              padding: 7px;
               display: flex;
               flex-direction: column;
               justify-content: space-evenly;
@@ -182,31 +210,109 @@
             }
 
             label {
+              margin-left: 5px;
               display: block;
-
             }
           
             input {
               background: white;
               border: none;
               box-shadow: none;
-              border-bottom: 2px solid rgb(27, 160, 153);
-              transition: all .75s;
+              height: 4vh;
               outline: none;
             }
           }
           
-          .radio-button_container{
+          .radio-button__container{
+            width: 100%;
+            display: grid;
+            grid-template-rows: auto auto;
+
+            .radio-button__text{
+              grid-row: 1;
+              font-size: 16px;
+              font-weight: 400;
+              padding: 10px;
+              color: rgba(255, 255, 255, 0.8);
+            }
 
             .radio-buttons {
+              grid-row: 2;
               display: flex;
               flex-direction: row;
+              padding-top: 15px;
+              font-weight: 400;
+
+              input {
+                margin: 0px 20px 0px 20px;
+                transform: scale(1.5);
+              }
             }
           }
 
-          .welcome-form__page__submit {
-            display: flex;
+          .welcome-form__page__submit__container {
+            display: grid;
+            grid-template-rows: auto auto;
             justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            .welcome-form__page__submit__text {
+              grid-row: 1;
+              text-align: center;
+              padding: 15px;
+              color: rgba(255, 255, 255, 0.8);
+            }
+
+            button.welcome-form__submit {
+              grid-row: 2;
+              height: 6vh;
+              width: 17vw;
+              background: #DEE9EE;
+              background-size: cover;
+              background-position: right;
+              margin: 0;
+              padding:0;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2); 
+              box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+              
+              
+              p{
+                position: fixed;
+                z-index: 2;
+                margin: 1.2% 0% 0% 4%;
+                font-size: 16px;
+                font-weight: bold;
+                color: $blue;
+              }
+              
+              .welcome-form__submit-inner {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding:0;
+                background:  url("/assets/submit_arrow.png");
+                clip-path: inset(0 0 0 78%);
+                background-size: cover;
+                background-position: right;
+                background-repeat: no-repeat;
+                transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
+                // cursor: pointer;
+              }
+
+              &:hover .welcome-form__submit-inner {
+                clip-path: inset(0 0 0 0%);
+              }
+            }
+          }
+
+          .required-field {
+            padding: 2px;
+            font-size: 18px;
+            color: rgb(50, 202, 253);
           }
         }
     }
@@ -214,8 +320,11 @@
 
 
     .hide {
-      visibility: hidden;
+      // visibility: hidden;
+      display: none;
     }
+
+
   }
     
     

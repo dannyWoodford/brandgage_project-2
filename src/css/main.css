@@ -3,19 +3,26 @@
   font-family: 'Overpass', sans-serif;
 }
 
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  font-family: 'Overpass', sans-serif;
+}
+
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: #1d1d1d;
   background-image: url("/assets/dummy_model.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
 }
 
 body nav {
-  height: 114px;
+  height: 115px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -76,7 +83,6 @@ body nav .nav__left .nav__left__list .nav__left__list__item img {
 body nav .nav__left .nav__left__list .nav__left__list__item a {
   text-decoration: none;
   color: #241F20;
-  font-size: 1em;
   padding: 5%;
 }
 
@@ -129,16 +135,23 @@ body nav .nav__right .nav__right__container #nav__right__link--current {
   border-bottom: 3px solid white;
 }
 
-body .welcome-form__page {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
+@media screen and (min-width: 25em) {
+  body html {
+    font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+.welcome-form__page {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   z-index: 2;
   background: rgba(0, 96, 144, 0.8);
 }
 
-body .welcome-form__page .welcome-form__page__header {
-  height: 118px;
+.welcome-form__page .welcome-form__page__header {
+  height: 117px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -154,7 +167,7 @@ body .welcome-form__page .welcome-form__page__header {
           flex-direction: row;
 }
 
-body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
+.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
   width: 20%;
   height: 100%;
   background: white;
@@ -171,22 +184,52 @@ body .welcome-form__page .welcome-form__page__header .welcome-form__page__header
           align-items: center;
 }
 
-body .welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
+.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
   width: 143px;
   height: 24px;
 }
 
-body .welcome-form__page .welcome-form__page__container__form {
+.welcome-form__page .welcome-form__page__container__form {
   position: absolute;
-  width: 70vw;
-  height: 70vh;
-  margin: 0% 15% 0% 15%;
-  bottom: 0;
+  width: 66%;
+  height: 70%;
+  margin: 10% 17% 0% 17%;
   background: transparent;
   display: block;
+  color: #FFFFFF;
+  font-size: 14px;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .form-row {
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text {
+  width: 100%;
+  height: 10vh;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text {
+  font-size: 32px;
+  padding: 15px;
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text-info {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.welcome-form__page .welcome-form__page__container__form .form-row {
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,10 +244,10 @@ body .welcome-form__page .welcome-form__page__container__form .form-row {
   background: transparent;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .form-row .form-column {
+.welcome-form__page .welcome-form__page__container__form .form-row .form-column {
   height: 100%;
   width: 100%;
-  padding: 15px;
+  padding: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,22 +261,40 @@ body .welcome-form__page .welcome-form__page__container__form .form-row .form-co
   background: transparent;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .form-row label {
+.welcome-form__page .welcome-form__page__container__form .form-row label {
+  margin-left: 5px;
   display: block;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .form-row input {
+.welcome-form__page .welcome-form__page__container__form .form-row input {
   background: white;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-bottom: 2px solid #1ba099;
-  -webkit-transition: all .75s;
-  transition: all .75s;
+  height: 4vh;
   outline: none;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .radio-button_container .radio-buttons {
+.welcome-form__page .welcome-form__page__container__form .radio-button__container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-button__text {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons {
+  -ms-grid-row: 2;
+  grid-row: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,18 +302,87 @@ body .welcome-form__page .welcome-form__page__container__form .radio-button_cont
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-top: 15px;
+  font-weight: 400;
 }
 
-body .welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons input {
+  margin: 0px 20px 0px 20px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-body .hide {
-  visibility: hidden;
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__page__submit__text {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: center;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.8);
 }
-/*# sourceMappingURL=styles.css.map */
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  height: 6vh;
+  width: 17vw;
+  background: #DEE9EE;
+  background-size: cover;
+  background-position: right;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit p {
+  position: fixed;
+  z-index: 2;
+  margin: 1.2% 0% 0% 4%;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 96, 144, 0.8);
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit .welcome-form__submit-inner {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("/assets/submit_arrow.png");
+  -webkit-clip-path: inset(0 0 0 78%);
+          clip-path: inset(0 0 0 78%);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
+  transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
+}
+
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__submit:hover .welcome-form__submit-inner {
+  -webkit-clip-path: inset(0 0 0 0%);
+          clip-path: inset(0 0 0 0%);
+}
+
+.welcome-form__page .welcome-form__page__container__form .required-field {
+  padding: 2px;
+  font-size: 18px;
+  color: #32cafd;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
