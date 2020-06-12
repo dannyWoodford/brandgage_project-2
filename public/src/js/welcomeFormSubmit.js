@@ -1,8 +1,5 @@
-const welcomeForm = document.querySelector(".welcome-form__page")
-const form = document.querySelector('#form')
 
-
-form.addEventListener('submit', (e) => {
+welcomeForm.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log("first name", e.target.firstName.value)
     console.log("last name",e.target.lastName.value)
@@ -15,5 +12,5 @@ form.addEventListener('submit', (e) => {
     console.log("address",e.target.address.value)
     console.log("state",e.target.state.value)
     
-    welcomeForm.classList.add("hide");
+    welcomeFormContainer.classList.add("hide");
 })

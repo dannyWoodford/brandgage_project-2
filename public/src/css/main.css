@@ -1,0 +1,610 @@
+@font-face {
+    src: url("https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap");
+    font-family: "Overpass", sans-serif;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1d1d1d;
+    background-image: url("/public/assets/dummy_model.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body nav {
+    height: 115px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: #2D2D2D;
+    display: flex;
+    flex-direction: row;
+}
+body nav .nav__left {
+    width: 33.5%;
+    height: 100%;
+    background-image: url("/public/assets/nav__left-background.png");
+    background-position: right bottom;
+    display: flex;
+    flex-direction: row;
+}
+body nav .nav__left .nav__left__list {
+    width: 33.5vw;
+    height: 100%;
+    margin: 0% 5% 0% 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+body nav .nav__left .nav__left__list .nav__left__list__item {
+    padding-bottom: 5%;
+}
+body nav .nav__left .nav__left__list .nav__left__list__item img {
+    width: 143px;
+    height: 24px;
+}
+body nav .nav__left .nav__left__list .nav__left__list__item p {
+    text-decoration: none;
+    color: #241F20;
+    padding: 5%;
+}
+body nav .nav__left .nav__left__list .nav__left__list__item .nav__left__list__item--current {
+    color: #006090;
+    border-bottom: 3px solid #006090;
+}
+body nav .nav__right {
+    width: 66.5%;
+    height: 100%;
+    background: rgba(0, 96, 144, 0.7);
+    padding: 0% 5% 0% 5%;
+}
+body nav .nav__right .nav__right__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+body nav .nav__right .nav__right__container .nav__right__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+body nav .nav__right .nav__right__container .nav__right__link p {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+body nav .nav__right .nav__right__container .nav__right__link--current {
+    border-bottom: 3px solid white;
+}
+
+.welcome-form__page {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: rgba(0, 96, 144, 0.7);
+}
+.welcome-form__page .welcome-form__page__header {
+    height: 117px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: #006090;
+    display: flex;
+    flex-direction: row;
+}
+.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo {
+    width: 20%;
+    height: 100%;
+    background: white;
+    box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-form__page .welcome-form__page__header .welcome-form__page__header__logo img {
+    width: 143px;
+    height: 24px;
+}
+.welcome-form__page .welcome-form__page__container__form {
+    position: absolute;
+    width: 66%;
+    height: 70%;
+    margin: 10% 17% 0% 17%;
+    background: transparent;
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text {
+    width: 100%;
+    height: 10vh;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text {
+    font-size: 32px;
+    padding: 15px;
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__text #welcome-text-info {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.welcome-form__page .welcome-form__page__container__form .form-row {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.welcome-form__page .welcome-form__page__container__form .form-row .form-column {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.welcome-form__page .welcome-form__page__container__form .form-row label {
+    margin-left: 5px;
+    display: block;
+}
+.welcome-form__page .welcome-form__page__container__form .form-row select, .welcome-form__page .welcome-form__page__container__form .form-row input {
+    background: white;
+    border: none;
+    box-shadow: none;
+    height: 4vh;
+    outline: none;
+}
+.welcome-form__page .welcome-form__page__container__form .radio-button__container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-button__text {
+    grid-row: 1;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    font-weight: 400;
+}
+.welcome-form__page .welcome-form__page__container__form .radio-button__container .radio-buttons input {
+    margin: 0px 20px 0px 20px;
+    transform: scale(1.5);
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container .welcome-form__page__submit__text {
+    grid-row: 1;
+    text-align: center;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit {
+    grid-row: 2;
+    height: 50px;
+    width: 240px;
+    background: #DEE9EE;
+    background-size: cover;
+    background-position: right;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit p {
+    position: fixed;
+    z-index: 2;
+    margin: 1.2% 0% 0% 4%;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 96, 144, 0.7);
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit .welcome-form__submit-inner {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("/public/assets/submit_arrow.png");
+    -webkit-clip-path: inset(0 0 0 78%);
+            clip-path: inset(0 0 0 78%);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
+}
+.welcome-form__page .welcome-form__page__container__form .welcome-form__page__submit__container button.welcome-form__submit:hover .welcome-form__submit-inner {
+    -webkit-clip-path: inset(0 0 0 0%);
+            clip-path: inset(0 0 0 0%);
+}
+.welcome-form__page .welcome-form__page__container__form .required-field {
+    padding: 2px;
+    font-size: 18px;
+    color: #32cafd;
+}
+
+.hide {
+    display: none;
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.medical-info-form {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container {
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    margin: 10% 15% 0% 15%;
+    background: transparent;
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.medical-info-form .medical-info-form__container .medical-info-form__container__text {
+    width: 100%;
+    height: 10vh;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+.medical-info-form .medical-info-form__container #medical-form-title {
+    font-size: 32px;
+    padding: 15px;
+}
+.medical-info-form .medical-info-form__container #medical-form-info {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .medical-info-form__container .form-row {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .form-row .form-column {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .form-row label {
+    margin-left: 5px;
+    display: block;
+}
+.medical-info-form .medical-info-form__container .form-row select, .medical-info-form .medical-info-form__container .form-row input {
+    background: white;
+    border: none;
+    box-shadow: none;
+    height: 4vh;
+    outline: none;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential__text {
+    grid-row: 1;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs {
+    grid-row: 2;
+    padding-top: 15px;
+    font-weight: 400;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs .form-row {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs .form-row .form-column {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs .form-row input {
+    margin: 0px 20px 0px 20px;
+    transform: scale(2);
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs .form-row .form-column-other {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .medical-credential__container .medical-credential-checkboxs .form-row input[type=text] {
+    margin-left: 63px;
+    height: 2vh;
+    width: 8vw;
+}
+.medical-info-form .medical-info-form__container .medical-product__container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product__text {
+    grid-row: 1;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product-checkboxs {
+    grid-row: 2;
+    border-radius: 50%;
+    padding-top: 15px;
+    font-weight: 400;
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product-checkboxs .form-row {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product-checkboxs .form-row .form-column {
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background: transparent;
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product-checkboxs .form-row input {
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0px 20px 0px 20px;
+    transform: scale(2);
+    width: 1.3em;
+}
+.medical-info-form .medical-info-form__container .medical-product__container .medical-product-checkboxs .form-row input:checked {
+    background-color: rgba(0, 96, 144, 0.7);
+}
+.medical-info-form .provide-information__container {
+    height: 25vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+.medical-info-form .provide-information__container .provide-information__text {
+    padding: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .provide-information__container textarea {
+    height: 80%;
+    width: 100%;
+    background: white;
+}
+.medical-info-form .signature-container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 95%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.medical-info-form .signature-container .signature__text {
+    margin-bottom: 1vh;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .signature-container #sig-canvas {
+    border: 2px solid #CCCCCC;
+    background: white;
+    cursor: crosshair;
+}
+.medical-info-form .signature-container .row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+}
+.medical-info-form .signature-container .row #ck-button label {
+    float: left;
+    width: 4em;
+}
+.medical-info-form .signature-container .row #ck-button label input {
+    transform: scale(0.1, 0.1);
+    float: right;
+}
+.medical-info-form .signature-container .row #ck-button label span {
+    text-align: center;
+    width: 100px;
+    padding: 9px 0px;
+    display: block;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: black;
+}
+.medical-info-form .signature-container .row #sig-clearBtn {
+    background: white;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.medical-info-form .signature-container .signiture-placeholder {
+    text-indent: -9999px;
+    height: 1px;
+    width: 1px;
+}
+.medical-info-form .signature-container .show-signiture {
+    height: 20vh;
+    width: 60%;
+}
+.medical-info-form .preferred-contact__container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.medical-info-form .preferred-contact__container .preferred-contact__text {
+    grid-row: 1;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .preferred-contact__container .preferred-contacts {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    font-weight: 400;
+}
+.medical-info-form .preferred-contact__container .preferred-contacts input {
+    margin: 0px 20px 0px 20px;
+    transform: scale(1.5);
+}
+.medical-info-form .medical-info-form__submit__container {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 0px;
+}
+.medical-info-form .medical-info-form__submit__container .medical-info-form__submit__text {
+    grid-row: 1;
+    text-align: center;
+    padding: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.medical-info-form .medical-info-form__submit__container button.medical-info-form__submit {
+    grid-row: 2;
+    height: 50px;
+    width: 240px;
+    background: #DEE9EE;
+    background-size: cover;
+    background-position: right;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.2);
+}
+.medical-info-form .medical-info-form__submit__container button.medical-info-form__submit p {
+    position: absolute;
+    z-index: 2;
+    margin: 2.2% 0% 0% 7%;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0, 96, 144, 0.7);
+}
+.medical-info-form .medical-info-form__submit__container button.medical-info-form__submit .medical-info-form__submit-inner {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("/public/assets/submit_arrow.png");
+    -webkit-clip-path: inset(0 0 0 78%);
+            clip-path: inset(0 0 0 78%);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: all 0.5s cubic-bezier(0.62, -0.42, 1, 1);
+}
+.medical-info-form .medical-info-form__submit__container button.medical-info-form__submit:hover .medical-info-form__submit-inner {
+    -webkit-clip-path: inset(0 0 0 0%);
+            clip-path: inset(0 0 0 0%);
+}
+.medical-info-form .required-field {
+    padding: 2px;
+    font-size: 18px;
+    color: #32cafd;
+}
+.medical-info-form ::-webkit-scrollbar {
+    width: 6px;
+}
+.medical-info-form ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.medical-info-form ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
